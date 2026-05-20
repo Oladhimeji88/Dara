@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FDFCF9;
+  --color-sand: #F5EFE6;
+  --color-gold: #C9A84C;
+  --color-gold-light: #F0E5C5;
+  --color-gold-dark: #A8893A;
+  --color-charcoal: #1C1C1E;
+  --color-muted: #6B6B6B;
+  --color-whatsapp: #25D366;
+  --color-whatsapp-dark: #1DA851;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  background-color: #FDFCF9;
+  color: #1C1C1E;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+.font-display {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5EFE6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9A84C;
+  border-radius: 3px;
+}
+
+/* WhatsApp modal scroll lock */
+body.modal-open {
+  overflow: hidden;
+}
