@@ -1,0 +1,31 @@
+// Replace this with the actual business WhatsApp number (country code + number, no +)
+export const WHATSAPP_NUMBER = '2348012345678'
+
+export const BUSINESS_NAME = 'Wunmi Dara Wears'
+
+export function buildWhatsAppUrl(product) {
+  const imageNote = product.image
+    ? `\n\n🖼️ *Product Image:* ${product.image}`
+    : ''
+
+  const message =
+    `Hello ${BUSINESS_NAME}! 👋\n\n` +
+    `I'm interested in ordering this item:\n\n` +
+    `👗 *Product:* ${product.name}\n` +
+    `💰 *Price:* ${product.price}\n` +
+    `📝 *Description:* ${product.description}` +
+    imageNote +
+    `\n\nCould you please provide more details on availability and how to place an order? Thank you! 🙏`
+
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
+}
+
+export function openProductWhatsApp(product) {
+  const url = buildWhatsAppUrl(product)
+  window.open(url, '_blank', 'noopener,noreferrer')
+}
+
+export function getDirectChatUrl() {
+  const message = `Hello ${BUSINESS_NAME}! I'd like to enquire about your fashion items. 👗`
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
+}
