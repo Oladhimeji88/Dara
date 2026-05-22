@@ -56,7 +56,6 @@ export default function ProductCard({ product, onSelect }) {
           <h3 className="text-[11px] font-semibold text-white uppercase tracking-wide leading-snug truncate">
             {product.name}
           </h3>
-          <span className="text-xs font-bold text-gold shrink-0">{product.price}</span>
         </div>
       </div>
 

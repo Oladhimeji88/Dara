@@ -46,8 +46,6 @@ export default function ProductDetails() {
     image: product.image,
     offers: {
       '@type': 'Offer',
-      priceCurrency: 'NGN',
-      price: product.price.replace(/[^0-9]/g, ''),
       availability: 'https://schema.org/InStock',
       seller: { '@type': 'Organization', name: 'Wunmi Dara Wears' },
     },
@@ -128,7 +126,6 @@ export default function ProductDetails() {
             <h1 className="text-3xl sm:text-4xl font-black text-white uppercase tracking-tight leading-tight">
               {product.name}
             </h1>
-            <p className="text-3xl font-black text-gold mt-3">{product.price}</p>
 
             <div className="w-10 h-px bg-divider my-6" />
 
@@ -161,7 +158,7 @@ export default function ProductDetails() {
                 </p>
               </div>
               <p className="px-4 py-3 text-[11px] text-muted leading-relaxed whitespace-pre-line font-light">
-                {`Hello Wunmi Dara Wears! 👋\n\nI'm interested in ordering:\n👗 *${product.name}* — ${product.price}\n\nPlease share availability & how to order. Thank you! 🙏`}
+                {`Hello Wunmi Dara Wears! 👋\n\nI'm interested in ordering:\n👗 *${product.name}*\n\nPlease share availability & how to order. Thank you! 🙏`}
               </p>
             </div>
 

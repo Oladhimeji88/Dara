@@ -27,7 +27,6 @@ export const products = [
     image: img1,
     description:
       'A stunning wrap dress crafted from premium Ankara fabric. The bold geometric print and flowing silhouette make it perfect for celebrations, outings, and cultural events.',
-    price: '₦35,000',
     category: 'Dresses',
     featured: true,
   },
@@ -37,7 +36,6 @@ export const products = [
     image: img2,
     description:
       'Exquisite Swiss lace gown with hand-embroidered gold detailing. Floor-length elegance designed for weddings, owambe parties, and black-tie events.',
-    price: '₦85,000',
     category: 'Gowns',
     featured: true,
   },
@@ -47,7 +45,6 @@ export const products = [
     image: img3,
     description:
       'Lightweight floral boubou top and wide-leg trouser set. Breathable cotton-blend fabric perfect for warm weather styling with a modern African touch.',
-    price: '₦42,000',
     category: 'Co-ord Sets',
     featured: false,
   },
@@ -57,7 +54,6 @@ export const products = [
     image: img4,
     description:
       'Classic Aso-Ebi blouse with puff sleeves and intricate lace trim. Can be paired with the matching wrapper or a high-waist skirt for a versatile look.',
-    price: '₦28,000',
     category: 'Blouses',
     featured: false,
   },
@@ -67,7 +63,6 @@ export const products = [
     image: img5,
     description:
       'Contemporary wide-leg jumpsuit in a rich Ankara print. Features a cinched waist, deep pockets, and a halter neckline — effortlessly chic and comfortable.',
-    price: '₦48,000',
     category: 'Jumpsuits',
     featured: true,
   },
@@ -77,7 +72,6 @@ export const products = [
     image: img6,
     description:
       'Flowing silk-blend evening gown in a beautiful coral hue. The asymmetric neckline and thigh-high slit add drama and sophistication to any formal occasion.',
-    price: '₦72,000',
     category: 'Gowns',
     featured: false,
   },
@@ -87,7 +81,6 @@ export const products = [
     image: img7,
     description:
       'Authentic Adire-inspired wrap skirt and crop top co-ord. Hand-dyed indigo and white pattern — a celebration of traditional Nigerian craftsmanship.',
-    price: '₦38,000',
     category: 'Co-ord Sets',
     featured: false,
   },
@@ -97,7 +90,6 @@ export const products = [
     image: img8,
     description:
       'Timeless Iro and Buba set in a stunning wax print fabric. Comes with matching gele headwrap. Perfect for traditional ceremonies and cultural events.',
-    price: '₦55,000',
     category: 'Co-ord Sets',
     featured: true,
   },
@@ -107,7 +99,6 @@ export const products = [
     image: img9,
     description:
       'Luxurious off-shoulder bodycon dress adorned with hand-sewn beads at the neckline and hem. A show-stopping piece for evenings and celebrations.',
-    price: '₦65,000',
     category: 'Dresses',
     featured: false,
   },
@@ -117,7 +108,6 @@ export const products = [
     image: img10,
     description:
       'Wide-leg palazzo trousers with a matching cropped blazer in a bold Ankara print. Power dressing meets African fashion heritage.',
-    price: '₦52,000',
     category: 'Co-ord Sets',
     featured: false,
   },
@@ -127,7 +117,6 @@ export const products = [
     image: img11,
     description:
       'Romantic ruffle-sleeve blouse in French lace. The fitted bodice and dramatic sleeves create a perfectly balanced silhouette for owambe events.',
-    price: '₦32,000',
     category: 'Blouses',
     featured: false,
   },
@@ -137,7 +126,6 @@ export const products = [
     image: img12,
     description:
       'Regal Aso-Oke fabric transformed into a modern column gown. The deep purple woven texture and structured fit exude royalty and grace.',
-    price: '₦95,000',
     category: 'Gowns',
     featured: true,
   },
@@ -147,7 +135,6 @@ export const products = [
     image: img13,
     description:
       'Floor-sweeping kaftan gown with hand-stitched floral embroidery across the neckline and sleeves. Rich fabric draping with effortless Nigerian elegance.',
-    price: '₦78,000',
     category: 'Gowns',
     featured: false,
   },
@@ -157,7 +144,6 @@ export const products = [
     image: img14,
     description:
       'Structured peplum blouse in a luxurious velvet fabric. The flared hem and fitted bodice create a flattering silhouette perfect for evening events.',
-    price: '₦30,000',
     category: 'Blouses',
     featured: false,
   },
@@ -167,7 +153,6 @@ export const products = [
     image: img15,
     description:
       'Vibrant Hollandis fabric wrap dress with a tied waist and flutter sleeves. The deep jewel-toned print makes every entrance unforgettable.',
-    price: '₦40,000',
     category: 'Dresses',
     featured: true,
   },
@@ -177,7 +162,6 @@ export const products = [
     image: img16,
     description:
       'Sleek wide-leg jumpsuit in smooth satin finish. A modern silhouette with a plunging V-neckline and adjustable tie waist — effortlessly sophisticated.',
-    price: '₦58,000',
     category: 'Jumpsuits',
     featured: false,
   },
@@ -187,7 +171,6 @@ export const products = [
     image: img17,
     description:
       'Bold Ankara mini dress with a square neckline and puff sleeves. A playful yet polished take on traditional African prints for daytime outings.',
-    price: '₦27,000',
     category: 'Dresses',
     featured: false,
   },
@@ -197,7 +180,6 @@ export const products = [
     image: img18,
     description:
       'Matching brocade crop top and high-waist skirt in traditional Yoruba weave. A head-turning two-piece perfect for naming ceremonies and cultural occasions.',
-    price: '₦46,000',
     category: 'Co-ord Sets',
     featured: false,
   },
@@ -207,7 +189,6 @@ export const products = [
     image: img19,
     description:
       'Dramatic floor-length wrap gown crafted from sheer lace over satin lining. The adjustable wrap silhouette flatters every figure for weddings and galas.',
-    price: '₦88,000',
     category: 'Gowns',
     featured: true,
   },
