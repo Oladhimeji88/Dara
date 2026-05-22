@@ -4,16 +4,11 @@ export const WHATSAPP_NUMBER = '2349042670997'
 export const BUSINESS_NAME = 'Wunmi Dara Wears'
 
 export function buildWhatsAppUrl(product) {
-  const imageNote = product.image
-    ? `\n\n🖼️ *Product Image:* ${product.image}`
-    : ''
-
   const message =
     `Hello ${BUSINESS_NAME}! 👋\n\n` +
     `I'm interested in ordering this item:\n\n` +
     `👗 *Product:* ${product.name}\n` +
     `📝 *Description:* ${product.description}` +
-    imageNote +
     `\n\nCould you please provide more details on availability and how to place an order? Thank you! 🙏`
 
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
