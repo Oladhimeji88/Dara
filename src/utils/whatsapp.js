@@ -1,5 +1,5 @@
 // Replace this with the actual business WhatsApp number (country code + number, no +)
-export const WHATSAPP_NUMBER = '2348012345678'
+export const WHATSAPP_NUMBER = '2349042670997'
 
 export const BUSINESS_NAME = 'Wunmi Dara Wears'
 
@@ -12,7 +12,6 @@ export function buildWhatsAppUrl(product) {
     `Hello ${BUSINESS_NAME}! 👋\n\n` +
     `I'm interested in ordering this item:\n\n` +
     `👗 *Product:* ${product.name}\n` +
-    `💰 *Price:* ${product.price}\n` +
     `📝 *Description:* ${product.description}` +
     imageNote +
     `\n\nCould you please provide more details on availability and how to place an order? Thank you! 🙏`

@@ -128,7 +128,7 @@ export default function Collection() {
               <p className="text-lg font-black text-white uppercase tracking-tight">Custom Orders Available</p>
             </div>
             <a
-              href="https://wa.me/2348012345678?text=Hello%20Wunmi%20Dara%20Wears!%20I'd%20like%20to%20enquire%20about%20a%20custom%20order."
+              href="https://wa.me/2349042670997?text=Hello%20Wunmi%20Dara%20Wears!%20I'd%20like%20to%20enquire%20about%20a%20custom%20order."
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gold text-black text-[10px] font-bold px-8 py-3.5 uppercase tracking-[0.2em] hover:bg-gold-dark transition-colors whitespace-nowrap"

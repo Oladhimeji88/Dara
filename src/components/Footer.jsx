@@ -41,9 +41,15 @@ export default function Footer() {
           {/* Contact cell */}
           <div className="py-10 sm:pl-8">
             <p className="text-[9px] font-bold tracking-[0.3em] uppercase text-muted mb-4">Order &amp; Enquiries</p>
-            <p className="text-xs text-muted mb-5 leading-relaxed">
+            <p className="text-xs text-muted mb-4 leading-relaxed">
               All orders and enquiries are handled directly via WhatsApp for a fast, personal experience.
             </p>
+            <a
+              href="mailto:ogundareolawunmi3@gmial.com"
+              className="block text-xs text-muted hover:text-white transition-colors mb-5 truncate"
+            >
+              ogundareolawunmi3@gmial.com
+            </a>
             <a
               href={getDirectChatUrl()}
               target="_blank"
