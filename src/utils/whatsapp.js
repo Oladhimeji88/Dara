@@ -3,7 +3,7 @@ export const WHATSAPP_NUMBER = '2349042670997'
 
 export const BUSINESS_NAME = 'Wunmi Dara Wears'
 
-const SITE_URL = 'https://wunmidarawears.com'
+const SITE_URL = 'https://dara-roan.vercel.app'
 
 export function buildWhatsAppUrl(product) {
   const imageUrl = product.image ? `${SITE_URL}${product.image}` : null
