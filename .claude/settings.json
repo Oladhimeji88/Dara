@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "PowerShell(vercel --version 2>&1)",
-      "PowerShell(Get-PSDrive C | Select-Object Used, Free, @{N='Used\\(GB\\)';E={[math]::Round\\($_.Used/1GB,2\\)}}, @{N='Free\\(GB\\)';E={[math]::Round\\($_.Free/1GB,2\\)}})"
+      "PowerShell(Get-PSDrive C | Select-Object Used, Free, @{N='Used\\(GB\\)';E={[math]::Round\\($_.Used/1GB,2\\)}}, @{N='Free\\(GB\\)';E={[math]::Round\\($_.Free/1GB,2\\)}})",
+      "PowerShell(Get-Volume C)",
+      "PowerShell(wmic logicaldisk get deviceid,freespace,size)",
+      "PowerShell(npm cache clean --force 2>&1)",
+      "PowerShell(wmic logicaldisk where deviceid=\"C:\" get freespace)"
     ]
   }
 }
