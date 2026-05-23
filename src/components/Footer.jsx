@@ -45,10 +45,10 @@ export default function Footer() {
               All orders and enquiries are handled directly via WhatsApp for a fast, personal experience.
             </p>
             <a
-              href="mailto:ogundareolawunmi3@gmial.com"
+              href="mailto:ogundareolawunmi3@gmail.com"
               className="block text-xs text-muted hover:text-white transition-colors mb-5 truncate"
             >
-              ogundareolawunmi3@gmial.com
+              ogundareolawunmi3@gmail.com
             </a>
             <a
               href={getDirectChatUrl()}
