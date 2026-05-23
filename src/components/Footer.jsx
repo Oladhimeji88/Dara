@@ -6,12 +6,10 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="bg-[#050505] border-t border-divider">
+    <footer className="bg-footer border-t border-divider">
 
-      {/* Main row */}
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
 
-        {/* Top — logo + nav + cta */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-0 divide-y sm:divide-y-0 sm:divide-x divide-divider border-b border-divider">
 
           {/* Logo cell */}
@@ -30,8 +28,8 @@ export default function Footer() {
               ].map(item => (
                 <li key={item.label}>
                   {item.to
-                    ? <Link to={item.to} className="text-xs text-muted hover:text-white transition-colors uppercase tracking-widest">{item.label}</Link>
-                    : <a href={item.href} className="text-xs text-muted hover:text-white transition-colors uppercase tracking-widest">{item.label}</a>
+                    ? <Link to={item.to} className="text-xs text-muted hover:text-primary transition-colors uppercase tracking-widest">{item.label}</Link>
+                    : <a href={item.href} className="text-xs text-muted hover:text-primary transition-colors uppercase tracking-widest">{item.label}</a>
                   }
                 </li>
               ))}
@@ -46,7 +44,7 @@ export default function Footer() {
             </p>
             <a
               href="mailto:ogundareolawunmi3@gmail.com"
-              className="block text-xs text-muted hover:text-white transition-colors mb-5 truncate"
+              className="block text-xs text-muted hover:text-primary transition-colors mb-5 truncate"
             >
               ogundareolawunmi3@gmail.com
             </a>
@@ -66,10 +64,10 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="py-4 flex flex-col sm:flex-row justify-between items-center gap-1.5">
-          <p className="text-[10px] text-[#2a2a2a] uppercase tracking-widest">
+          <p className="text-[10px] text-subtle uppercase tracking-widest">
             © {year} Wunmi Dara Wears — All rights reserved
           </p>
-          <p className="text-[10px] text-[#222] uppercase tracking-widest">
+          <p className="text-[10px] text-subtle uppercase tracking-widest">
             Made with love in Nigeria 🇳🇬
           </p>
         </div>

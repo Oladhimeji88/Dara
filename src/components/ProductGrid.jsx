@@ -21,14 +21,14 @@ export default function ProductGrid({ onSelect }) {
           <p className="text-[9px] font-semibold tracking-[0.35em] uppercase text-muted mb-1">
             02 — Collection
           </p>
-          <h2 className="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-black text-primary uppercase tracking-tight">
             The Edit
           </h2>
         </div>
         <p className="text-[10px] text-muted hidden sm:block">{items.length} pieces</p>
       </div>
 
-      {/* Category filter — text tabs, no pills */}
+      {/* Category filter */}
       <div className="flex gap-0 overflow-x-auto mb-10 border-b border-divider">
         {CATEGORIES.map(cat => (
           <button
@@ -36,8 +36,8 @@ export default function ProductGrid({ onSelect }) {
             onClick={() => setActive(cat)}
             className={`text-[9px] font-bold tracking-[0.22em] uppercase px-4 py-3 whitespace-nowrap transition-colors duration-200 border-b-2 -mb-px ${
               active === cat
-                ? 'text-white border-gold'
-                : 'text-muted border-transparent hover:text-white hover:border-[#333]'
+                ? 'text-primary border-gold'
+                : 'text-muted border-transparent hover:text-primary hover:border-subtle'
             }`}
           >
             {cat}
@@ -55,7 +55,7 @@ export default function ProductGrid({ onSelect }) {
           className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-px bg-divider border border-divider"
         >
           {items.map(product => (
-            <div key={product.id} className="bg-[#080808]">
+            <div key={product.id} className="bg-page">
               <ProductCard product={product} onSelect={onSelect} />
             </div>
           ))}

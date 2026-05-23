@@ -25,7 +25,7 @@ export default function ProductCard({ product, onSelect }) {
       className="group relative bg-surface border border-divider hover:border-gold transition-colors duration-300 cursor-pointer overflow-hidden"
     >
       {/* Catalog number */}
-      <span className="absolute top-3 right-3 z-10 text-[10px] font-light text-[#333] tabular-nums select-none">
+      <span className="absolute top-3 right-3 z-10 text-[10px] font-light text-subtle tabular-nums select-none">
         {String(product.id).padStart(2, '0')}
       </span>
 
@@ -43,7 +43,6 @@ export default function ProductCard({ product, onSelect }) {
             imgLoaded ? 'opacity-100' : 'opacity-0'
           }`}
         />
-        {/* Gradient on hover */}
         <div className="absolute inset-x-0 bottom-0 h-16 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
@@ -52,11 +51,9 @@ export default function ProductCard({ product, onSelect }) {
         <p className="text-[9px] tracking-[0.2em] uppercase text-muted mb-1.5 font-medium">
           {product.category}
         </p>
-        <div className="flex items-baseline justify-between gap-2">
-          <h3 className="text-[11px] font-semibold text-white uppercase tracking-wide leading-snug truncate">
-            {product.name}
-          </h3>
-        </div>
+        <h3 className="text-[11px] font-semibold text-primary uppercase tracking-wide leading-snug truncate">
+          {product.name}
+        </h3>
       </div>
 
       {/* Slide-up CTA on hover */}

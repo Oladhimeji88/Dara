@@ -35,7 +35,7 @@ export default function Collection() {
         structuredData={structuredData}
       />
 
-      <div className="min-h-screen bg-[#080808] pt-16">
+      <div className="min-h-screen bg-page pt-16">
 
         {/* Page header */}
         <div className="border-b border-divider">
@@ -43,9 +43,9 @@ export default function Collection() {
 
             {/* Breadcrumb */}
             <nav className="flex items-center gap-2 text-[10px] text-muted uppercase tracking-widest pt-4 pb-3 border-b border-divider">
-              <Link to="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="text-[#333]">/</span>
-              <span className="text-white">Collection</span>
+              <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+              <span className="text-subtle">/</span>
+              <span className="text-primary">Collection</span>
             </nav>
 
             {/* Heading row */}
@@ -54,7 +54,7 @@ export default function Collection() {
                 <p className="text-[9px] font-semibold tracking-[0.35em] uppercase text-muted mb-2">
                   02 — The Edit
                 </p>
-                <h1 className="text-4xl sm:text-5xl font-black text-white uppercase tracking-tight leading-none">
+                <h1 className="text-4xl sm:text-5xl font-black text-primary uppercase tracking-tight leading-none">
                   The Collection
                 </h1>
               </div>
@@ -71,15 +71,15 @@ export default function Collection() {
                   onClick={() => setActiveCategory(cat)}
                   className={`relative shrink-0 px-5 py-3 text-[10px] font-semibold tracking-[0.2em] uppercase transition-colors duration-200 border-b-2 -mb-px ${
                     activeCategory === cat
-                      ? 'text-white border-gold'
-                      : 'text-muted border-transparent hover:text-white hover:border-divider'
+                      ? 'text-primary border-gold'
+                      : 'text-muted border-transparent hover:text-primary hover:border-divider'
                   }`}
                 >
                   {cat}
                 </button>
               ))}
               <div className="ml-auto shrink-0 pl-4 pb-px self-end">
-                <span className="text-[10px] text-[#333] tabular-nums">
+                <span className="text-[10px] text-subtle tabular-nums">
                   {filtered.length} {filtered.length === 1 ? 'piece' : 'pieces'}
                 </span>
               </div>
@@ -99,7 +99,7 @@ export default function Collection() {
               className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-px bg-divider border border-divider"
             >
               {filtered.map(p => (
-                <div key={p.id} className="bg-[#080808]">
+                <div key={p.id} className="bg-page">
                   <ProductCard product={p} />
                 </div>
               ))}
@@ -109,7 +109,7 @@ export default function Collection() {
           {filtered.length === 0 && (
             <div className="flex flex-col items-center justify-center py-24 text-center">
               <p className="text-[9px] tracking-[0.35em] uppercase text-muted mb-3">No items</p>
-              <p className="text-2xl font-black text-white uppercase tracking-tight">Nothing here yet</p>
+              <p className="text-2xl font-black text-primary uppercase tracking-tight">Nothing here yet</p>
               <button
                 onClick={() => setActiveCategory('All')}
                 className="mt-6 text-[10px] font-semibold tracking-[0.2em] uppercase text-gold hover:text-gold-dark transition-colors"
@@ -125,7 +125,7 @@ export default function Collection() {
           <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
               <p className="text-[9px] font-semibold tracking-[0.35em] uppercase text-muted mb-1">Don't see what you're looking for?</p>
-              <p className="text-lg font-black text-white uppercase tracking-tight">Custom Orders Available</p>
+              <p className="text-lg font-black text-primary uppercase tracking-tight">Custom Orders Available</p>
             </div>
             <a
               href="https://wa.me/2349042670997?text=Hello%20Wunmi%20Dara%20Wears!%20I'd%20like%20to%20enquire%20about%20a%20custom%20order."
