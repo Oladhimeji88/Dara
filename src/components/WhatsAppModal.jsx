@@ -27,7 +27,7 @@ export default function WhatsAppModal({ product, onClose }) {
         aria-label={product.name}
       >
         {/* Backdrop */}
-        <div className="absolute inset-0 bg-black/85" onClick={onClose} />
+        <div className="absolute inset-0 bg-black/75" onClick={onClose} />
 
         {/* Panel */}
         <motion.div
@@ -35,7 +35,7 @@ export default function WhatsAppModal({ product, onClose }) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 48 }}
           transition={{ duration: 0.28, ease: [0.32, 0.72, 0, 1] }}
-          className="relative w-full sm:max-w-lg bg-[#0d0d0d] border border-divider max-h-[94svh] overflow-y-auto"
+          className="relative w-full sm:max-w-lg bg-modal border border-divider max-h-[94svh] overflow-y-auto"
         >
           {/* Header bar */}
           <div className="flex items-center justify-between px-5 py-3.5 border-b border-divider">
@@ -44,7 +44,7 @@ export default function WhatsAppModal({ product, onClose }) {
             </span>
             <button
               onClick={onClose}
-              className="w-7 h-7 border border-divider flex items-center justify-center text-muted hover:text-white hover:border-[#444] transition-colors"
+              className="w-7 h-7 border border-divider flex items-center justify-center text-muted hover:text-primary hover:border-subtle transition-colors"
               aria-label="Close"
             >
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-3.5 h-3.5">
@@ -53,15 +53,11 @@ export default function WhatsAppModal({ product, onClose }) {
             </button>
           </div>
 
-          {/* Body — image left, details right on desktop */}
+          {/* Body */}
           <div className="sm:flex">
             {/* Image */}
             <div className="sm:w-48 shrink-0 bg-surface2 aspect-3/4 sm:aspect-auto overflow-hidden">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-full object-cover"
-              />
+              <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
             </div>
 
             {/* Details */}
@@ -69,10 +65,9 @@ export default function WhatsAppModal({ product, onClose }) {
               <span className="text-[9px] font-bold tracking-[0.25em] uppercase text-gold">
                 {product.category}
               </span>
-              <h2 className="text-lg font-black text-white uppercase tracking-tight mt-1 leading-tight">
+              <h2 className="text-lg font-black text-primary uppercase tracking-tight mt-1 leading-tight">
                 {product.name}
               </h2>
-              <p className="text-xl font-bold text-gold mt-1">{product.price}</p>
               <p className="text-xs text-muted mt-3 leading-relaxed flex-1">
                 {product.description}
               </p>
@@ -83,7 +78,7 @@ export default function WhatsAppModal({ product, onClose }) {
                   WhatsApp Message
                 </p>
                 <p className="text-[11px] text-muted leading-relaxed whitespace-pre-line font-light">
-                  {`Hello Wunmi Dara Wears! 👋\n\n👗 *${product.name}*\n💰 ${product.price}\n\nCould you share availability? 🙏`}
+                  {`Hello Wunmi Dara Wears! 👋\n\n👗 *${product.name}*\n\nCould you share availability? 🙏`}
                 </p>
               </div>
             </div>
@@ -102,7 +97,7 @@ export default function WhatsAppModal({ product, onClose }) {
             </button>
             <button
               onClick={onClose}
-              className="border-l border-divider px-5 text-[10px] font-bold uppercase tracking-[0.15em] text-muted hover:text-white hover:bg-surface transition-colors"
+              className="border-l border-divider px-5 text-[10px] font-bold uppercase tracking-[0.15em] text-muted hover:text-primary hover:bg-surface transition-colors"
             >
               Close
             </button>

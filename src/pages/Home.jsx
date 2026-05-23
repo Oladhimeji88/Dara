@@ -7,7 +7,7 @@ import SEO from '../components/SEO'
 import { getDirectChatUrl } from '../utils/whatsapp'
 import daraLogo from '../assets/Dara.svg'
 
-const TICKER_TEXT = 'ANKARA · ASO-EBI · LACE · COUTURE · BESPOKE · HANDMADE · NIGERIAN FASHION · PREMIUM WEAR · WUNMI DARA · '
+const TICKER_TEXT = 'ANKARA · ASO-EBI · LACE · COUTURE · BESPOKE · HANDMADE · NIGERIAN FASHION · PREMIUM WEAR · WUNMI DARA · '
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 28 },
@@ -44,20 +44,20 @@ export default function Home() {
     <>
       <SEO structuredData={homeStructuredData} />
       {/* ── HERO ── */}
-      <section className="relative min-h-screen flex flex-col bg-[#080808] pt-16 overflow-hidden">
+      <section className="relative min-h-screen flex flex-col bg-page pt-16 overflow-hidden">
 
-        {/* Ambient gold glow — top */}
-        <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-gold opacity-[0.05] blur-[140px]" />
+        {/* Ambient gold glow */}
+        <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-gold opacity-[0.04] blur-[140px]" />
 
         {/* Editorial corner labels */}
         <div className="absolute top-20 left-5 sm:left-10 hidden sm:block">
-          <p className="text-[9px] tracking-[0.35em] uppercase text-[#333] writing-mode-vertical"
+          <p className="text-[9px] tracking-[0.35em] uppercase text-subtle"
             style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
             Lagos · Nigeria · Est. 2020
           </p>
         </div>
         <div className="absolute top-20 right-5 sm:right-10 hidden sm:block">
-          <p className="text-[9px] tracking-[0.35em] uppercase text-[#333]"
+          <p className="text-[9px] tracking-[0.35em] uppercase text-subtle"
             style={{ writingMode: 'vertical-rl' }}>
             Premium Collection
           </p>
@@ -66,7 +66,6 @@ export default function Home() {
         {/* Centre content */}
         <div className="flex-1 flex flex-col items-center justify-center px-6 py-16">
 
-          {/* Logo — the hero */}
           <motion.img
             src={daraLogo}
             alt="Wunmi Dara Wears"
@@ -97,14 +96,13 @@ export default function Home() {
           </motion.p>
 
           {/* CTAs */}
-          <motion.div {...fadeUp(0.52)}
-            className="flex flex-col sm:flex-row gap-3 mt-9">
+          <motion.div {...fadeUp(0.52)} className="flex flex-col sm:flex-row gap-3 mt-9">
             <Link to="/collection"
-              className="bg-white text-black text-[10px] font-bold px-8 py-4 tracking-[0.22em] uppercase hover:bg-gold transition-colors duration-200 text-center">
+              className="bg-primary text-page text-[10px] font-bold px-8 py-4 tracking-[0.22em] uppercase hover:bg-gold hover:text-black transition-colors duration-200 text-center">
               Explore Collection
             </Link>
             <a href={getDirectChatUrl()} target="_blank" rel="noopener noreferrer"
-              className="border border-[#333] text-white text-[10px] font-bold px-8 py-4 tracking-[0.22em] uppercase hover:border-white transition-colors duration-200 flex items-center justify-center gap-2">
+              className="border border-subtle text-primary text-[10px] font-bold px-8 py-4 tracking-[0.22em] uppercase hover:border-primary transition-colors duration-200 flex items-center justify-center gap-2">
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 text-whatsapp" aria-hidden="true">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
               </svg>
@@ -130,12 +128,9 @@ export default function Home() {
 
         {/* ── SCROLLING TICKER ── */}
         <div className="border-t border-divider overflow-hidden">
-          <div
-            className="flex whitespace-nowrap py-3"
-            style={{ animation: 'marquee 28s linear infinite' }}
-          >
+          <div className="flex whitespace-nowrap py-3" style={{ animation: 'marquee 28s linear infinite' }}>
             {Array.from({ length: 4 }).map((_, i) => (
-              <span key={i} className="text-[9px] font-semibold tracking-[0.38em] uppercase text-[#2e2e2e] mx-2">
+              <span key={i} className="text-[9px] font-semibold tracking-[0.38em] uppercase text-subtle mx-2">
                 {TICKER_TEXT}
               </span>
             ))}
@@ -150,7 +145,6 @@ export default function Home() {
       <section id="about" className="py-20 px-5 sm:px-8 lg:px-10 max-w-7xl mx-auto w-full">
         <div className="bg-surface border border-divider">
 
-          {/* Section label */}
           <div className="border-b border-divider px-8 py-4 flex items-center justify-between">
             <span className="text-[9px] font-semibold tracking-[0.35em] uppercase text-muted">03 — Our Story</span>
             <div className="w-4 h-px bg-divider" />
@@ -160,7 +154,7 @@ export default function Home() {
 
             {/* Text side */}
             <div className="p-8 sm:p-12 border-b md:border-b-0 md:border-r border-divider">
-              <h2 className="text-3xl sm:text-4xl font-black text-white leading-tight tracking-tight uppercase">
+              <h2 className="text-3xl sm:text-4xl font-black text-primary leading-tight tracking-tight uppercase">
                 Fashion Rooted<br />
                 in <span className="text-gold">African Culture</span>
               </h2>
@@ -194,12 +188,10 @@ export default function Home() {
               ].map((f, i) => (
                 <div
                   key={f.title}
-                  className={`p-6 sm:p-8 border-divider ${
-                    i % 2 === 0 ? 'border-r' : ''
-                  } ${i < 2 ? 'border-b' : ''}`}
+                  className={`p-6 sm:p-8 border-divider ${i % 2 === 0 ? 'border-r' : ''} ${i < 2 ? 'border-b' : ''}`}
                 >
                   <span className="text-xl">{f.icon}</span>
-                  <h3 className="text-xs font-bold text-white uppercase tracking-widest mt-4">{f.title}</h3>
+                  <h3 className="text-xs font-bold text-primary uppercase tracking-widest mt-4">{f.title}</h3>
                   <p className="text-xs text-muted mt-2 leading-relaxed">{f.desc}</p>
                 </div>
               ))}
@@ -208,7 +200,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Modal */}
       {selectedProduct && (
         <WhatsAppModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
       )}

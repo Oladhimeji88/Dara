@@ -20,14 +20,12 @@ export default function ProductDetails() {
 
   if (!product) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center pt-16 px-4 text-center bg-[#080808]">
+      <div className="min-h-screen flex flex-col items-center justify-center pt-16 px-4 text-center bg-page">
         <p className="text-[9px] tracking-[0.35em] uppercase text-muted mb-4">Error 404</p>
-        <p className="text-4xl font-black text-white uppercase tracking-tight">Not Found</p>
+        <p className="text-4xl font-black text-primary uppercase tracking-tight">Not Found</p>
         <div className="w-12 h-px bg-gold mt-5 mb-6 mx-auto" />
-        <Link
-          to="/"
-          className="bg-white text-black text-[10px] font-bold px-8 py-3.5 uppercase tracking-[0.2em] hover:bg-gold transition-colors"
-        >
+        <Link to="/"
+          className="bg-primary text-page text-[10px] font-bold px-8 py-3.5 uppercase tracking-[0.2em] hover:bg-gold hover:text-black transition-colors">
           Back to Collection
         </Link>
       </div>
@@ -62,17 +60,17 @@ export default function ProductDetails() {
       ogImage={product.image}
       structuredData={productSchema}
     />
-    <div className="min-h-screen bg-[#080808] pt-16">
+    <div className="min-h-screen bg-page pt-16">
 
       {/* Breadcrumb */}
       <div className="border-b border-divider">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-3">
           <nav className="flex items-center gap-2 text-[10px] text-muted uppercase tracking-widest">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <span className="text-[#333]">/</span>
-            <Link to="/#collection" className="hover:text-white transition-colors">Collection</Link>
-            <span className="text-[#333]">/</span>
-            <span className="text-white truncate max-w-40">{product.name}</span>
+            <Link to="/" className="hover:text-primary transition-colors">Home</Link>
+            <span className="text-subtle">/</span>
+            <Link to="/#collection" className="hover:text-primary transition-colors">Collection</Link>
+            <span className="text-subtle">/</span>
+            <span className="text-primary truncate max-w-40">{product.name}</span>
           </nav>
         </div>
       </div>
@@ -95,8 +93,7 @@ export default function ProductDetails() {
               onLoad={() => setImgLoaded(true)}
               className={`w-full h-full object-cover transition-opacity duration-500 ${imgLoaded ? 'opacity-100' : 'opacity-0'}`}
             />
-            {/* Category label */}
-            <span className="absolute top-4 left-4 bg-black/80 backdrop-blur-sm text-white text-[9px] font-bold px-3 py-1.5 uppercase tracking-[0.25em] border border-white/10">
+            <span className="absolute top-4 left-4 bg-black/70 backdrop-blur-sm text-white text-[9px] font-bold px-3 py-1.5 uppercase tracking-[0.25em] border border-white/10">
               {product.category}
             </span>
           </motion.div>
@@ -111,7 +108,7 @@ export default function ProductDetails() {
             {/* Back */}
             <button
               onClick={() => navigate(-1)}
-              className="flex items-center gap-1.5 text-[9px] uppercase tracking-[0.25em] text-muted hover:text-white transition-colors mb-8 self-start"
+              className="flex items-center gap-1.5 text-[9px] uppercase tracking-[0.25em] text-muted hover:text-primary transition-colors mb-8 self-start"
             >
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-3.5 h-3.5">
                 <path d="M19 12H5M5 12l7 7M5 12l7-7" strokeLinecap="square" strokeLinejoin="miter" />
@@ -119,11 +116,10 @@ export default function ProductDetails() {
               Back
             </button>
 
-            {/* Name & price */}
             <p className="text-[9px] font-bold tracking-[0.3em] uppercase text-gold mb-2">
               {product.category}
             </p>
-            <h1 className="text-3xl sm:text-4xl font-black text-white uppercase tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-4xl font-black text-primary uppercase tracking-tight leading-tight">
               {product.name}
             </h1>
 
@@ -170,7 +166,7 @@ export default function ProductDetails() {
               {WA_ICON}
               Request on WhatsApp
             </button>
-            <p className="text-center text-[9px] text-[#333] uppercase tracking-widest mt-3">
+            <p className="text-center text-[9px] text-subtle uppercase tracking-widest mt-3">
               Opens WhatsApp with a pre-filled message
             </p>
           </motion.div>
@@ -184,20 +180,18 @@ export default function ProductDetails() {
                 <p className="text-[9px] font-semibold tracking-[0.35em] uppercase text-muted mb-1">
                   More from this category
                 </p>
-                <h2 className="text-2xl font-black text-white uppercase tracking-tight">
+                <h2 className="text-2xl font-black text-primary uppercase tracking-tight">
                   You May Also Like
                 </h2>
               </div>
-              <Link
-                to="/"
-                className="text-[9px] uppercase tracking-[0.2em] text-muted hover:text-white transition-colors hidden sm:block"
-              >
+              <Link to="/"
+                className="text-[9px] uppercase tracking-[0.2em] text-muted hover:text-primary transition-colors hidden sm:block">
                 View All →
               </Link>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-px bg-divider border border-divider">
               {related.map(p => (
-                <div key={p.id} className="bg-[#080808]">
+                <div key={p.id} className="bg-page">
                   <ProductCard product={p} />
                 </div>
               ))}
